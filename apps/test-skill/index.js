@@ -28,6 +28,7 @@ app.intent('askRecipe',
   function(request,response) {
     response.say("The recipe I have prepared is " + food.recipe.name);
     response.shouldEndSession(false);
+    request.session('step',0);
   }
 );
 app.intent('askIngredients',
@@ -70,7 +71,6 @@ app.intent('checkIngredient',
   function(request,response) {
   response.say("Let me check the amount of " + request.slot('ingredient') + " you need.");
   response.shouldEndSession(false);
-
   }
 );
 app.intent('checkStep',
@@ -87,6 +87,25 @@ app.intent('checkStep',
     }
     response.say("Step " + (step + 1) + " says " + food.recipe.directions[step].step);
     response.shouldEndSession(false);
+  }
+);
+app.intent('nextStep',
+  {
+  "utterances":[ 
+    "Next step",
+    "Go to next step",
+    "What do I do next",
+    "What is the next step",
+    "What is the next direction"]
+  },
+  function(request,response) {
+    var step = request.session('step');
+    if (step == "") {
+      step = 0;
+    }
+    response.say("Step " + (step + 1) + " says " + food.recipe.directions[step].step);
+    response.shouldEndSession(false);
+    request.session('step',step+1);
   }
 );
 module.exports = app;
