@@ -104,7 +104,7 @@ app.intent('nextStep',
       step = 0;
     }
     if (step <= Object.keys(food.recipe.ingredients).length - 1) {
-      response.say("Step " + (step + 2) + " says " + food.recipe.directions[step].step);
+      response.say("Step " + (step + 1) + " says " + food.recipe.directions[step].step);
       response.session('step',step);
     }
     else {
