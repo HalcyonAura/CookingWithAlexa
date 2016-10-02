@@ -79,7 +79,7 @@ app.intent('checkStep',
   },
   function(request,response) {
     var step = request.session('step');
-    response.say("Step " + step + " says to " + food.recipe.directions[step].step;
+    response.say("Step " + step + " says to " + food.recipe.directions[step].step);
   }
 );
 module.exports = app;
