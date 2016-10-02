@@ -23,7 +23,7 @@ app.intent('testRecipe',
     "Test my stuff"]
   },
   function(request,response) {
-    response.say(+ recipe.recipe.directions[0].step);
+    response.say(recipe.recipe.directions[1].step);
   }
 );
 module.exports = app;
