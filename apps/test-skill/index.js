@@ -26,7 +26,6 @@ app.intent('askRecipe',
     "What am I making"]
   },
   function(request,response) {
-    response.session('step',1);
     response.say("The recipe I have prepared is " + food.recipe.name);
     response.shouldEndSession(false);
   }
@@ -58,6 +57,7 @@ app.intent('askIngredients',
       }
     }
   response.say(recipeList);
+  response.shouldEndSession(false);
   }
 );
 app.intent('checkIngredient',
@@ -69,6 +69,8 @@ app.intent('checkIngredient',
   },
   function(request,response) {
   response.say("Let me check the amount of " + request.slot('ingredient') + " you need.");
+  response.shouldEndSession(false);
+
   }
 );
 app.intent('checkStep',
@@ -81,9 +83,10 @@ app.intent('checkStep',
   function(request,response) {
     var step = request.session('step');
     if (step == "") {
-      step = 1;
+      step = 0;
     }
-    response.say("Step " + step + " says " + food.recipe.directions[step].step);
+    response.say("Step " + (step + 1) + " says " + food.recipe.directions[step].step);
+    response.shouldEndSession(false);
   }
 );
 module.exports = app;
