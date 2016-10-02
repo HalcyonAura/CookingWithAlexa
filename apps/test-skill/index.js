@@ -52,7 +52,7 @@ app.intent('askIngredients',
         recipeList += " " + food.recipe.ingredients[i].prep + ". ";
       }
       else {
-        recipeList += " . ";
+        recipeList += ". ";
       }
     }
   response.say(recipeList);
