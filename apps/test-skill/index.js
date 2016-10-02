@@ -28,6 +28,7 @@ app.intent('askRecipe',
   function(request,response) {
     response.session('step',1);
     response.say("The recipe I have prepared is " + food.recipe.name);
+    response.shouldEndSession(false);
   }
 );
 app.intent('askIngredients',
