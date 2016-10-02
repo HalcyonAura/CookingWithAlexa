@@ -80,7 +80,10 @@ app.intent('checkStep',
   },
   function(request,response) {
     var step = request.session('step');
-    response.say("Step " + step + " says to " + food.recipe.directions[step].step);
+    if (step == "") {
+      step = 1;
+    }
+    response.say("Step " + step + " says " + food.recipe.directions[step].step);
   }
 );
 module.exports = app;
