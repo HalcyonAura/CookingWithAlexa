@@ -60,7 +60,7 @@ app.intent('askIngredients',
 );
 app.intent('checkIngredient',
   {
-    "slots": {"ingredient":"INGREDIENT"}
+    "slots": {"ingredient":"INGREDIENTS"}
   },
   {
   "utterances":[ 
