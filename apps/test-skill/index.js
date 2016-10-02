@@ -121,7 +121,7 @@ app.intent('stop',
   "Stop"]
 },
 function(request,response) {
-  reponse.say("Okay I'll stop");
+  response.say("Okay I'll stop");
   response.shouldEndSession(true);
 }
 )
