@@ -1,0 +1,11 @@
+<html>
+	<h1>Cooking with Alexa</h1>
+	<p>Input the full URL from allrecipes of the food you would like to make!</p>
+	<%= form_tag("/index") do %>
+		<%= label_tag(:text1, "Enter the URL here") %>
+		<%= text_field_tag :text1 %>
+		<%= submit_tag %>
+	<% end %>
+	<p>Your URL is <%= @data %></p>
+	<p>Your recipe is <%= @recipes.recipe_url(data) %></p>
+</html>

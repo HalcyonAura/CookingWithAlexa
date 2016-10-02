@@ -1,0 +1,9 @@
+{"name":"Easy Meatloaf": [
+	"image":"http://images.media-allrecipes.com/userphotos/250x250/00/03/24/32427.jpg",
+	"serving":12
+	"ingredients": [{"quantity":1.0, "unit": "pound", "name":"ground beef"}, {"quantity":0.5, "unit": "cup", "name":"water"}]
+	"directions": ["Bring a large pot of lightly salted water to a boil", "Test step"],
+	"rating":5.0,
+	"prep_time":90,
+	"cook_time":60
+}
