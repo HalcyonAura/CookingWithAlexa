@@ -68,7 +68,7 @@ app.intent('checkIngredient',
     "How many {cups|grams|ounces|tablespoons|teaspoons} of {ingredient}"]
   },
   function(request,response) {
-  response.say("Let me check the amount of " + request.slot('ingredient') + " you need.");
+  response.say("Let me check the amount of you need.");
   }
 );
 module.exports = app;
