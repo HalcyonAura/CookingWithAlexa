@@ -49,10 +49,10 @@ app.intent('askIngredients',
         recipeList += food.ingredients[i].quantity + " " + food.ingredients[i].unit + " of " + food.ingredients[i].name;
       }
       if (food.ingredients[i].prep != "") {
-        recipeList += " " + food.ingredients[i].prep + ". "
+        recipeList += " " + food.ingredients[i].prep + ". ";
       }
       else {
-        recipeList += " . "
+        recipeList += " . ";
       }
     response.say(recipeList);
     }
