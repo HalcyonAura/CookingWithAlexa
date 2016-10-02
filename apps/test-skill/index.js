@@ -6,7 +6,7 @@ var food = require( './recipe.json' );
 var app = new alexa.app( 'test-skill' );
 
 app.launch( function( request, response ) {
-	response.say( 'Welcome to your test skill' ).reprompt( 'Way to go. You got it to run. Bad ass.' ).shouldEndSession( false );
+	response.say( 'Welcome to Cooking with Alexa! You can ask what\'s for dinner.' ).reprompt( 'Even though I\'m a robot, I\'m famished. We should start cooking' ).shouldEndSession( false );
 } );
 
 
