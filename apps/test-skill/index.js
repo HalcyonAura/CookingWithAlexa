@@ -60,13 +60,13 @@ app.intent('askIngredients',
 );
 app.intent('checkIngredient',
   {
-    "slots": {"ingredient":"INGREDIENTS"},
+    "slots": {"ingredient":"INGREDIENT"},
   "utterances":[ 
     "How much {ingredient} do I need?",
     "How many {cups|grams|ounces|tablespoons|teaspoons} of {ingredient}"]
   },
   function(request,response) {
-  response.say("Let me check the amount of you need.");
+  response.say("Let me check the amount of " + request.slot('ingredient') + " you need.");
   }
 );
 module.exports = app;
