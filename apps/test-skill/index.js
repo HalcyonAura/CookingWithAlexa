@@ -38,18 +38,18 @@ app.intent('askIngredients',
   },
   function(request,response) {
     var recipeList = "For this recipe you will need the following. ";
-    for (var i = 0; i <= food.amountIngredients - 1; i++) {
-      if (food.ingredients[i].quantity == "") {
-        recipeList += food.ingredients[i].name + "";
+    for (var i = 0; i <= food.recipe.amountIngredients - 1; i++) {
+      if (food.recipe.ingredients[i].quantity == "") {
+        recipeList += food.recipe.ingredients[i].name + "";
       }
-      else if(food.ingredients[i].unit == ""){
-        recipeList += food.ingredients[i].quantity + " of " + food.ingredients[i].name;
+      else if(food.recipe.ingredients[i].unit == ""){
+        recipeList += food.recipe.ingredients[i].quantity + " of " + food.recipe.ingredients[i].name;
       }
       else {
-        recipeList += food.ingredients[i].quantity + " " + food.ingredients[i].unit + " of " + food.ingredients[i].name;
+        recipeList += food.recipe.ingredients[i].quantity + " " + food.recipe.ingredients[i].unit + " of " + food.recipe.ingredients[i].name;
       }
-      if (food.ingredients[i].prep != "") {
-        recipeList += " " + food.ingredients[i].prep + ". ";
+      if (food.recipe.ingredients[i].prep != "") {
+        recipeList += " " + food.recipe.ingredients[i].prep + ". ";
       }
       else {
         recipeList += " . ";
