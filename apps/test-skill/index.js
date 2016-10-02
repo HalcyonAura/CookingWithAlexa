@@ -60,9 +60,7 @@ app.intent('askIngredients',
 );
 app.intent('checkIngredient',
   {
-    "slots": {"ingredient":"INGREDIENTS"}
-  },
-  {
+    "slots": {"ingredient":"INGREDIENTS"},
   "utterances":[ 
     "How much {ingredient} do I need?",
     "How many {cups|grams|ounces|tablespoons|teaspoons} of {ingredient}"]
