@@ -2,7 +2,7 @@ module.change_code = 1;
 'use strict';
 
 var alexa = require( 'alexa-app' );
-var recipe = require( './recipe.json' );
+var food = require( './recipe.json' );
 var app = new alexa.app( 'test-skill' );
 
 app.launch( function( request, response ) {
@@ -23,7 +23,7 @@ app.intent('okayGoogle',
 		"Test my stuff"]
   },
   function(request,response) {
-    response.say("Your name is" + recipe.recipe.name);
+    response.say("Your name is" + food.recipe.name);
   }
 );
 app.intent('okayBing',
