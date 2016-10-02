@@ -38,25 +38,24 @@ app.intent('askIngredients',
   },
   function(request,response) {
     var recipeList = "For this recipe you will need the following. ";
-    // for (var i = 0; i <= food.amountIngredients - 1; i++) {
-    //   if (food.ingredients[i].quantity == "") {
-    //     recipeList += food.ingredients[i].name + "";
-    //   }
-    //   else if(food.ingredients[i].unit == ""){
-    //     recipeList += food.ingredients[i].quantity + " of " + food.ingredients[i].name;
-    //   }
-    //   else {
-    //     recipeList += food.ingredients[i].quantity + " " + food.ingredients[i].unit + " of " + food.ingredients[i].name;
-    //   }
-    //   if (food.ingredients[i].prep != "") {
-    //     recipeList += " " + food.ingredients[i].prep + ". ";
-    //   }
-    //   else {
-    //     recipeList += " . ";
-    //   }
-    // }
+    for (var i = 0; i <= food.amountIngredients - 1; i++) {
+      if (food.ingredients[i].quantity == "") {
+        recipeList += food.ingredients[i].name + "";
+      }
+      else if(food.ingredients[i].unit == ""){
+        recipeList += food.ingredients[i].quantity + " of " + food.ingredients[i].name;
+      }
+      else {
+        recipeList += food.ingredients[i].quantity + " " + food.ingredients[i].unit + " of " + food.ingredients[i].name;
+      }
+      if (food.ingredients[i].prep != "") {
+        recipeList += " " + food.ingredients[i].prep + ". ";
+      }
+      else {
+        recipeList += " . ";
+      }
+    }
   response.say(recipeList);
-
   }
 );
 module.exports = app;
