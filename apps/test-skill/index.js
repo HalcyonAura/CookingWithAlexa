@@ -26,6 +26,7 @@ app.intent('askRecipe',
     "What am I making"]
   },
   function(request,response) {
+    response.session('step',1)
     response.say("The recipe I have prepared is " + food.recipe.name);
   }
 );
@@ -67,6 +68,18 @@ app.intent('checkIngredient',
   },
   function(request,response) {
   response.say("Let me check the amount of " + request.slot('ingredient') + " you need.");
+  }
+);
+app.intent('checkStep',
+  {
+  "utterances":[ 
+    "What is the current step",
+    "Repeat the step",
+    "Check current step"]
+  },
+  function(request,response) {
+    var step = request.session('step');
+    response.say("Step " + step + " says to " + food.recipe.directions[step].step;
   }
 );
 module.exports = app;
