@@ -119,7 +119,7 @@ app.intent('stop',
 {
   "utterances":[
   "Stop"]
-}
+},
 function(request,response) {
   reponse.say("Okay I'll stop");
   response.shouldEndSession(true);
