@@ -38,7 +38,7 @@ app.intent('askIngredients',
   },
   function(request,response) {
     var recipeList = "For this recipe you will need the following. ";
-    for (var i = 0; i <= food.recipe.amountIngredients - 1; i++) {
+    for (var i = 0; i <= Object.keys(food.recipe.ingredients).length - 1; i++) {
       if (food.recipe.ingredients[i].quantity == "") {
         recipeList += food.recipe.ingredients[i].name + "";
       }
