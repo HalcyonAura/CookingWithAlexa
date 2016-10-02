@@ -26,7 +26,7 @@ app.intent('askRecipe',
     "What am I making"]
   },
   function(request,response) {
-    request.session('step',0);
+    response.session('step',0);
     response.say("The recipe I have prepared is " + food.recipe.name);
     response.shouldEndSession(false);
   }
@@ -105,7 +105,7 @@ app.intent('nextStep',
     }
     response.say("Step " + (step + 1) + " says " + food.recipe.directions[step].step);
     response.shouldEndSession(false);
-    request.session('step',step+1);
+    response.session('step',step+1);
   }
 );
 module.exports = app;
