@@ -23,7 +23,7 @@ app.intent('okayGoogle',
 		"Test my stuff"]
   },
   function(request,response) {
-    response.say("Your name is" + food.recipe.name);
+    response.say("Your name is " + food.recipe.directions[0].step);
   }
 );
 app.intent('okayBing',
