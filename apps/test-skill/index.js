@@ -99,13 +99,13 @@ app.intent('nextStep',
     "What is the next direction"]
   },
   function(request,response) {
-    var step = request.session('step');
+    var step = request.session('step') + 1;
     if (step == "") {
       step = 0;
     }
-    response.say("Step " + (step + 1) + " says " + food.recipe.directions[step].step);
+    response.say("Step " + step + " says " + food.recipe.directions[step].step);
     response.shouldEndSession(false);
-    response.session('step',step+1);
+    response.session('step',step);
   }
 );
 module.exports = app;
