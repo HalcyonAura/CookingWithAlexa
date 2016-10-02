@@ -103,7 +103,7 @@ app.intent('nextStep',
     if (step == "") {
       step = 0;
     }
-    if (step <= Object.keys(food.recipe.ingredients).length - 1) {
+    if (step < Object.keys(food.recipe.ingredients).length - 1) {
       response.say("Step " + (step + 1) + " says " + food.recipe.directions[step].step);
       response.session('step',step);
     }
