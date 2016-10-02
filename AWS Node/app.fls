@@ -1,0 +1,6 @@
+PWD /Users/paulhorton/Documents/SampleApp/node
+INPUT /usr/local/texlive/2015/texmf.cnf
+INPUT /usr/local/texlive/2015/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/paulhorton/Documents/SampleApp/node/app.js
+OUTPUT /Users/paulhorton/Documents/SampleApp/node/app.log
