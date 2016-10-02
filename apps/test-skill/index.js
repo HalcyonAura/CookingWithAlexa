@@ -2,7 +2,7 @@ module.change_code = 1;
 'use strict';
 
 var alexa = require( 'alexa-app' );
-var recipe = require( './test.json' );
+var recipe = require( './recipe.json' );
 var app = new alexa.app( 'test-skill' );
 
 app.launch( function( request, response ) {
