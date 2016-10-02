@@ -29,13 +29,4 @@ app.intent('askRecipe',
     response.say("The recipe I have prepared is " + food.recipe.name);
   }
 );
-app.intent('okayBing',
-  {
-	"utterances":[ 
-		"Okay Bing, do a thing."]
-  },
-  function(request,response) {
-    response.say("I'm not Bing you idiot");
-  }
-);
 module.exports = app;
