@@ -54,8 +54,9 @@ app.intent('askIngredients',
     //   else {
     //     recipeList += " . ";
     //   }
-    response.say(recipeList);
-    }
+    // }
+  response.say(recipeList);
+
   }
 );
 module.exports = app;
