@@ -61,7 +61,7 @@ app.intent('askIngredients',
 app.intent('checkIngredient',
   {
     "slots": {"ingredient":"INGREDIENT"}
-  }
+  },
   {
   "utterances":[ 
     "How much {ingredient} do I need?",
