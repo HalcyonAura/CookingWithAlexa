@@ -43,7 +43,7 @@ app.intent('askIngredients',
         recipeList += food.recipe.ingredients[i].name + "";
       }
       else if(food.recipe.ingredients[i].unit == ""){
-        recipeList += food.recipe.ingredients[i].quantity + " " +  food.recipe.ingredients[i].name;
+        recipeList += food.recipe.ingredients[i].quantity + " " + food.recipe.ingredients[i].name;
       }
       else {
         recipeList += food.recipe.ingredients[i].quantity + " " + food.recipe.ingredients[i].unit + " of " + food.recipe.ingredients[i].name;

@@ -3,12 +3,15 @@
 	"name":"Easy Meatloaf",
 	"image":"http://images.media-allrecipes.com/userphotos/720x405/3372168.jpg",
 	"serving":8,
-	"amountIngredients": 4,
-	"ingredients":[
+	"amountIngredients": 4
+	"ingredients"[
 		{"quantity":"half", "unit": "cup", "name":"beef", "prep":""},
 		{"quantity":"one", "unit": "", "name":"onion", "prep":"chopped"},
 		{"quantity":"one", "unit": "cup", "name":"dried bread crumbs", "prep":""},
-		{"quantity":"", "unit": "", "name":"salt and pepper", "prep":"to taste"}
+		{"quantity":"", "unit": "", "name":"salt and pepper", "prep":"to taste"},
+		{"quantity":"two", "unit": "tablespoons", "name":"brown sugar", "prep":""},
+		{"quantity":"two", "unit": "tablespoons", "name":"prepared mustard", "prep":""},
+		{"quantity":"third", "unit": "cup", "name":"ketchup", "prep":""}
 	],
 	"directions": [
 		{"step":"Preheat oven to 350 degrees F (175 degrees C)."},
