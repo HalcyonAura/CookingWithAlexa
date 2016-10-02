@@ -26,7 +26,7 @@ app.intent('askRecipe',
     "What am I making"]
   },
   function(request,response) {
-    response.session('step',1)
+    response.session('step',1);
     response.say("The recipe I have prepared is " + food.recipe.name);
   }
 );
@@ -61,7 +61,7 @@ app.intent('askIngredients',
 );
 app.intent('checkIngredient',
   {
-    "slots": {"ingredient":"INGREDIENT"},
+    "slots": {"ingredient":"INGREDIENTS"},
   "utterances":[ 
     "How much {ingredient} do I need?",
     "How many {cups|grams|ounces|tablespoons|teaspoons} of {ingredient}"]
