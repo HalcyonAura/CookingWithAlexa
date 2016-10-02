@@ -103,9 +103,16 @@ app.intent('nextStep',
     if (step == "") {
       step = 0;
     }
-    response.say("Step " + step + " says " + food.recipe.directions[step].step);
+    if (step <= Object.keys(food.recipe.ingredients).length - 1) {
+      response.say("Step " + (step + 2) + " says " + food.recipe.directions[step].step);
+      response.session('step',step);
+    }
+    else {
+      response.say("There are no next steps!")
+      response.session('step',step-1)
+
+    }
     response.shouldEndSession(false);
-    response.session('step',step);
   }
 );
 module.exports = app;
