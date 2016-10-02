@@ -2,37 +2,28 @@ module.change_code = 1;
 'use strict';
 
 var alexa = require( 'alexa-app' );
-var recipe = require( './test.json' );
+var recipe = require( './recipe.json' );
 var app = new alexa.app( 'test-skill' );
 
 app.launch( function( request, response ) {
-	response.say( 'Welcome to your test skill' ).reprompt( 'Way to go. You got it to run. Bad ass.' ).shouldEndSession( false );
+  response.say( 'Welcome to your test skill' ).reprompt( 'Way to go. You got it to run. Bad ass.' ).shouldEndSession( false );
 } );
 
 
 app.error = function( exception, request, response ) {
-	console.log(exception)
-	console.log(request);
-	console.log(response);	
-	response.say( 'Sorry an error occured ' + error.message);
+  console.log(exception)
+  console.log(request);
+  console.log(response);  
+  response.say( 'Sorry an error occured ' + error.message);
 };
 
-app.intent('okayGoogle',
+app.intent('testRecipe',
   {
-	"utterances":[ 
-		"Test my stuff"]
+  "utterances":[ 
+    "Test my stuff"]
   },
   function(request,response) {
-    response.say("Your name is" + recipe.username);
-  }
-);
-app.intent('okayBing',
-  {
-	"utterances":[ 
-		"Okay Bing, do a thing."]
-  },
-  function(request,response) {
-    response.say("I'm not Bing you idiot");
+    response.say(+ recipe.recipe.directions[0].step);
   }
 );
 module.exports = app;
