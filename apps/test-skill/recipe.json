@@ -1,11 +1,24 @@
+
 {"recipe": {
 	"name":"Easy Meatloaf",
-	"image":"http://images.media-allrecipes.com/userphotos/250x250/00/03/24/32427.jpg",
-	"serving":12,
-	"ingredients": [{"quantity":1.0, "unit": "pound", "name":"ground beef"}, {"quantity":0.5, "unit": "cup", "name":"water"}],
-	"directions": [{"step":"Bring a large pot of lightly salted water to a boil"}, {"step":"Something else"}],
-	"rating":5.0,
-	"prep_time":90,
+	"image":"http://images.media-allrecipes.com/userphotos/720x405/3372168.jpg",
+	"serving":8,
+	"ingredients": [
+		{"quantity":1.5, "unit": "cup", "name":"beef", "prep":""},
+		{"quantity":1, "unit": "", "name":"onion", "prep":"chopped"},
+		{"quantity":1, "unit": "cup", "name":"dried bread crumbs", "prep":""},
+		{"quantity":0, "unit": "", "name":"salt and pepper", "prep":"to taste"},
+		{"quantity":2, "unit": "tablespoons", "name":"brown sugar", "prep":""},
+		{"quantity":2, "unit": "tablespoons", "name":"prepared mustard", "prep":""},
+		{"quantity":0.3, "unit": "cup", "name":"ketchup", "prep":""}
+	],
+	"directions": [
+		{"step":"Preheat oven to 350 degrees F (175 degrees C)."},
+		{"step":"In a large bowl, combine the beef, egg, onion, milk and bread OR cracker crumbs. Season with salt and pepper to taste and place in a lightly greased 5x9 inch loaf pan, OR form into a loaf and place in a lightly greased 9x13 inch baking dish."}
+		{"step":"In a separate small bowl, combine the brown sugar, mustard and ketchup. Mix well and pour over the meatloaf."},
+		{"step":"Bake at 350 degrees F (175 degrees C) for 1 hour."}],
+	"rating":4.5,
+	"prep_time":10,
 	"cook_time":60
 	}
 }

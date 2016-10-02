@@ -17,13 +17,16 @@ app.error = function( exception, request, response ) {
 	response.say( 'Sorry an error occured ' + error.message);
 };
 
-app.intent('okayGoogle',
+app.intent('askRecipe',
   {
 	"utterances":[ 
-		"Test my stuff"]
+		"What am I cooking?",
+    "What is for dinner?",
+    "What recipe is loaded?",
+    "What am I making?"]
   },
   function(request,response) {
-    response.say("Your name is " + food.recipe.directions[0].step);
+    response.say("The recipe I have prepared is " + food.recipe.name);
   }
 );
 app.intent('okayBing',
